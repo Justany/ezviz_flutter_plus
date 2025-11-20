@@ -338,6 +338,12 @@ class _EzvizPlayerState extends State<EzvizPlayer>
     final bool isIOS =
         !kIsWeb &&
         (Platform.isIOS || defaultTargetPlatform == TargetPlatform.iOS);
+    final bool isMacOS =
+        !kIsWeb &&
+        (Platform.isMacOS || defaultTargetPlatform == TargetPlatform.macOS);
+    final bool isWindows =
+        !kIsWeb &&
+        (Platform.isWindows || defaultTargetPlatform == TargetPlatform.windows);
 
     if (isAndroid) {
       return AndroidView(
@@ -355,6 +361,40 @@ class _EzvizPlayerState extends State<EzvizPlayer>
         hitTestBehavior: PlatformViewHitTestBehavior.opaque,
         gestureRecognizers: <Factory<OneSequenceGestureRecognizer>>{},
       );
+    } else if (isMacOS) {
+      // TODO: Implémenter le support macOS avec Platform View natif
+      // Pour l'instant, créer un controller factice pour permettre l'initialisation
+      // L'implémentation native macOS devra être ajoutée dans macos/Classes/
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        onPlatformViewCreated(0);
+      });
+      return Container(
+        color: Colors.black,
+        child: const Center(
+          child: Text(
+            'macOS support is being implemented.\nNative video player will be available soon.',
+            style: TextStyle(color: Colors.white),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      );
+    } else if (isWindows) {
+      // TODO: Implémenter le support Windows avec Platform View natif
+      // Pour l'instant, créer un controller factice pour permettre l'initialisation
+      // L'implémentation native Windows devra être ajoutée dans windows/
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        onPlatformViewCreated(0);
+      });
+      return Container(
+        color: Colors.black,
+        child: const Center(
+          child: Text(
+            'Windows support is being implemented.\nNative video player will be available soon.',
+            style: TextStyle(color: Colors.white),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      );
     } else {
       return Text(
         '${kIsWeb ? 'web' : 'Current platform'} is not yet supported by this plugin',
@@ -362,7 +402,7 @@ class _EzvizPlayerState extends State<EzvizPlayer>
     }
   }
 
-  Future<void> onPlatformViewCreated(id) async {
+  Future<void> onPlatformViewCreated(int id) async {
     if (_isDisposed) return;
 
     try {

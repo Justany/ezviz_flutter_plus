@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ezviz_flutter/ezviz_wifi_config.dart';

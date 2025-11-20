@@ -39,3 +39,7 @@ flutter:
         pluginClass: FlutterEzvizPlugin
       ios:
         pluginClass: FlutterEzvizPlugin
+      macos:
+        pluginClass: FlutterEzvizPlugin
+      windows:
+        pluginClass: EzvizFlutterPlugin

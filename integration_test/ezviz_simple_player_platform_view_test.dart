@@ -36,9 +36,9 @@ void main() {
 
     const config = EzvizPlayerConfig(
       appKey: 'test_key',
-      appSecret: 'test_secret',
       showControls: true,
-      autoPlay: false,
+      autoPlay: false, 
+      accessToken: 'test_token',
     );
 
     await tester.pumpWidget(MaterialApp(

@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ezviz_flutter/ezviz_player.dart';
@@ -133,13 +132,13 @@ void main() {
       final events = <dynamic>[];
       controller.setPlayerEventHandler((event) => events.add(event), (e) {});
 
-      // Simulate event as Map
-      final mapEvent = {
-        'eventType': EzvizPlayerChannelEvents.playerStatusChange,
-        'data': {'status': 1, 'message': 'ok'},
-      };
+      // Simulate event as Map (not used in current test implementation)
+      // final mapEvent = {
+      //   'eventType': EzvizPlayerChannelEvents.playerStatusChange,
+      //   'data': {'status': 1, 'message': 'ok'},
+      // };
       // Simulate event as String JSON
-      final stringEvent = json.encode(mapEvent);
+      // final stringEvent = json.encode(mapEvent); // Not used in current test
 
       // There isn't a trivial way to push on the EventChannel here, but invoking the listener is internal.
       // We exercise the setPlayerEventHandler path by calling the listener with receiveBroadcastStream is not accessible;
