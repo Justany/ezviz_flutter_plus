@@ -71,7 +71,7 @@ Le package `ezviz_flutter` est un plugin Flutter complet pour l'intégration des
 |------------|---------|---------------|--------|
 | Android | v5.7 | ✅ Disponible | Maven + .so files |
 | iOS | v5.7 | ✅ Disponible | CocoaPods + xcframework |
-| **Windows** | **v5.1.18** | **✅ Disponible** | **SDK natif C++ (266 MB)** |
+| **Windows** | **v4.3.6** | **✅ Disponible** | **SDK natif C++ (EZPCOpenSDK, ~37 MB)** |
 | **macOS** | - | **❌ Non disponible** | - |
 
 **Conclusion** :
@@ -144,18 +144,18 @@ Si l'Option A est trop complexe :
 
 ## 📝 Plan d'action pour Windows
 
-### ✅ SDK EZVIZ Windows disponible (v5.1.18 - C++)
+### ✅ SDK EZVIZ Windows disponible (v4.3.6 - EZPCOpenSDK)
 
 **Stratégie** : Implémentation native directe avec SDK C++
 
 ### Phase 1 : Préparation
-1. ✅ Vérifier la disponibilité du SDK EZVIZ pour Windows → ✅ Disponible (v5.1.18)
+1. ✅ Vérifier la disponibilité du SDK EZVIZ pour Windows → ✅ Disponible (v4.3.6)
 2. ✅ Créer la structure de dossiers `windows/`
 3. ✅ Configurer le `pubspec.yaml` pour déclarer le support Windows
 
 ### Phase 2 : Implémentation native Windows
 1. **Télécharger et intégrer le SDK EZVIZ Windows** :
-   - Télécharger le SDK v5.1.18 depuis le portail EZVIZ (266 MB)
+   - Télécharger le SDK v4.3.6 (EZPCOpenSDK) depuis le portail EZVIZ (~37 MB)
    - Extraire les DLL, headers et bibliothèques
    - Placer dans `windows/third_party/ezviz_sdk/`
 

@@ -100,39 +100,31 @@ ezviz_flutter/
 
 ## ⚠️ Important : SDK Windows
 
-Le SDK Windows (`windows/third_party/ezviz_sdk/`) est volumineux (~266 MB).
+Le SDK Windows (`windows/third_party/ezviz_sdk/`) fait environ 37 MB.
 
 **Options** :
 
-### Option 1 : Exclure du Git (Recommandé)
+### Option 1 : Inclure dans Git (Recommandé pour 37 MB)
 
-Ajouter dans `.gitignore` :
+Le SDK peut être inclus directement dans le repository Git (37 MB est acceptable).
+
+**Avantage** : Les utilisateurs ont tout immédiatement
+**Inconvénient** : Repository légèrement plus lourd
+
+### Option 2 : Exclure du Git (Alternative)
+
+Si vous préférez exclure le SDK, ajouter dans `.gitignore` :
 ```
-# SDK Windows (trop volumineux pour Git)
-windows/third_party/ezviz_sdk/
+# SDK Windows (optionnel - peut être inclus car seulement 37 MB)
+# windows/third_party/ezviz_sdk/
 ```
 
-**Avantage** : Repository léger
+**Avantage** : Repository plus léger
 **Inconvénient** : Les utilisateurs doivent télécharger le SDK séparément
-
-### Option 2 : Utiliser Git LFS
-
-```bash
-# Installer Git LFS
-git lfs install
-
-# Suivre les fichiers volumineux
-git lfs track "windows/third_party/ezviz_sdk/**/*.dll"
-git lfs track "windows/third_party/ezviz_sdk/**/*.lib"
-git lfs track "windows/third_party/ezviz_sdk/**/*.zip"
-
-# Ajouter .gitattributes
-git add .gitattributes
-```
 
 ### Option 3 : Documentation pour téléchargement
 
-Créer un fichier `windows/SDK_DOWNLOAD.md` avec les instructions.
+Créer un fichier `windows/SDK_DOWNLOAD.md` avec les instructions (si le SDK est exclu).
 
 ## 🔗 Utilisation depuis GitHub
 

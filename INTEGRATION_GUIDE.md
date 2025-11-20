@@ -16,7 +16,7 @@ Ce guide explique comment finaliser l'intégration des SDKs EZVIZ pour macOS et 
 ### Étape 1 : Télécharger le SDK
 
 1. Accéder au portail développeur EZVIZ : https://open.ys7.com/
-2. Télécharger le SDK Windows v5.1.18 (C++) - ~266 MB
+2. Télécharger le SDK Windows v4.3.6 (EZPCOpenSDK) - ~37 MB
 3. Extraire le SDK dans `windows/third_party/ezviz_sdk/`
 
 ### Étape 2 : Configurer CMakeLists.txt

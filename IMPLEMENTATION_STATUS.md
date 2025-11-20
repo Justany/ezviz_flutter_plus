@@ -4,7 +4,7 @@
 
 ### Windows - SDK EZVIZ intégré ✅
 
-**SDK utilisé** : EZPCOpenSDK v4.3.6 (OpenNetStream)
+**SDK utilisé** : EZPCOpenSDK v4.3.6 (OpenNetStream) - ~37 MB
 
 #### Fichiers créés/modifiés :
 - ✅ `windows/CMakeLists.txt` - Configuration complète avec tous les chemins SDK

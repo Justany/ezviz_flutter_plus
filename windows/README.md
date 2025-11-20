@@ -6,9 +6,9 @@ Cette implémentation Windows utilise le SDK EZVIZ v5.1.18 (C++) pour fournir to
 
 ## 🔧 Configuration requise
 
-1. **SDK EZVIZ Windows v5.1.18**
+1. **SDK EZVIZ Windows v4.3.6 (EZPCOpenSDK)**
    - Télécharger depuis : https://open.ys7.com/
-   - Taille : ~266 MB
+   - Taille : ~37 MB
    - Format : SDK C++ avec DLL, headers et bibliothèques
 
 2. **Flutter Desktop Support**

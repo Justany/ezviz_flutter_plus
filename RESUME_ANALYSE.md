@@ -54,7 +54,7 @@ Le package utilise :
 |------------|---------|---------------|--------|
 | Android | v5.7 | ✅ Disponible | Maven + .so files |
 | iOS | v5.7 | ✅ Disponible | CocoaPods + xcframework |
-| **Windows** | **v5.1.18** | **✅ Disponible** | **SDK natif C++ (266 MB)** |
+| **Windows** | **v4.3.6** | **✅ Disponible** | **SDK natif C++ (EZPCOpenSDK, ~37 MB)** |
 | **macOS** | - | **❌ Non disponible** | - |
 
 ### Stratégies par plateforme :

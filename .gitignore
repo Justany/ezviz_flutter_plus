@@ -23,3 +23,7 @@ Thumbs.db
 # Fichiers temporaires
 *.log
 *.tmp
+
+# SDK Windows (~37 MB - optionnel, peut être inclus dans Git)
+# Décommenter la ligne suivante si vous préférez exclure le SDK du repository
+# windows/third_party/ezviz_sdk/
