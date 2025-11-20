@@ -20,12 +20,6 @@ coverage/*
 .DS_Store
 Thumbs.db
 
-# SDK Windows (trop volumineux pour Git - ~266 MB)
-# Les utilisateurs doivent télécharger le SDK séparément
-# Voir windows/README.md pour les instructions
-windows/third_party/ezviz_sdk/
-*.zip
-
 # Fichiers temporaires
 *.log
 *.tmp

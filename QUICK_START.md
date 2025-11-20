@@ -96,12 +96,14 @@ flutter pub get
 
 ## ⚠️ Important : SDK Windows
 
-Le SDK Windows n'est **PAS** inclus dans le repository (trop volumineux).
+Le SDK Windows (~37 MB) peut être inclus dans le repository ou téléchargé séparément.
 
 **Pour les utilisateurs Windows** :
 1. Télécharger le SDK depuis https://open.ys7.com/
 2. Extraire dans `windows/third_party/ezviz_sdk/`
 3. Voir `windows/README.md` pour les détails
+
+**Note** : Le SDK fait environ 37 MB, ce qui est acceptable pour Git. Vous pouvez choisir de l'inclure ou de l'exclure selon vos préférences.
 
 ## 📚 Documentation complète
 

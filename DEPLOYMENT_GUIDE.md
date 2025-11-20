@@ -238,9 +238,9 @@ Une fois déployé, dans votre projet Flutter :
 ```yaml
 # pubspec.yaml
 dependencies:
-  ezviz_flutter:
+  ezviz_flutter_plus:
     git:
-      url: https://github.com/VOTRE_USERNAME/ezviz_flutter.git
+      url: https://github.com/Justany/ezviz_flutter_plus.git
       ref: main
 ```
 
@@ -250,6 +250,7 @@ flutter pub get
 
 ```dart
 // main.dart
+// Note: Le package s'appelle 'ezviz_flutter' dans le code
 import 'package:ezviz_flutter/ezviz_flutter.dart';
 
 void main() {
@@ -257,6 +258,10 @@ void main() {
   runApp(MyApp());
 }
 ```
+
+**Important** : 
+- Nom de dépendance dans `pubspec.yaml` : `ezviz_flutter_plus`
+- Import dans le code Dart : `package:ezviz_flutter/ezviz_flutter.dart`
 
 ## 🐛 Dépannage
 

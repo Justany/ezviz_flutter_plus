@@ -74,7 +74,7 @@ Dans votre projet Flutter :
 ```yaml
 # pubspec.yaml
 dependencies:
-  ezviz_flutter:
+  ezviz_flutter_plus:
     path: ../ezviz_flutter_plus  # Chemin relatif
 ```
 
@@ -88,11 +88,13 @@ flutter run
 ```yaml
 # pubspec.yaml
 dependencies:
-  ezviz_flutter:
+  ezviz_flutter_plus:
     git:
-      url: https://github.com/VOTRE_USERNAME/ezviz_flutter.git
+      url: https://github.com/Justany/ezviz_flutter_plus.git
       ref: main
 ```
+
+**Note** : Le package s'appelle `ezviz_flutter` dans le code, mais utilisez `ezviz_flutter_plus` comme nom de dépendance.
 
 ## 🔍 Vérifications spécifiques par plateforme
 
