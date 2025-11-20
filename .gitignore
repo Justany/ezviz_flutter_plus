@@ -24,6 +24,7 @@ Thumbs.db
 *.log
 *.tmp
 
-# SDK Windows (~37 MB - optionnel, peut être inclus dans Git)
-# Décommenter la ligne suivante si vous préférez exclure le SDK du repository
+# SDK Windows (~37 MB compressé, ~130 MB décompressé)
+# Le SDK peut être inclus dans Git (37 MB compressé est acceptable)
+# OU exclu si vous préférez (décommenter la ligne suivante)
 # windows/third_party/ezviz_sdk/

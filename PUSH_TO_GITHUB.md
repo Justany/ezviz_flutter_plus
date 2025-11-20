@@ -77,13 +77,11 @@ git push origin v1.2.7
 
 ## ⚠️ Important : SDK Windows
 
-Le SDK Windows (`windows/third_party/ezviz_sdk/`) fait environ **37 MB**.
+Le SDK Windows fait **~37 MB compressé** (~130 MB décompressé).
 
-**Options** :
-- **Inclure dans Git** (recommandé) : 37 MB est acceptable pour Git
-- **Exclure du Git** : Si vous préférez, les utilisateurs devront télécharger le SDK séparément
+**Recommandation** : Inclure le SDK dans Git (37 MB compressé est acceptable).
 
-**Si vous excluez** (décommenter dans `.gitignore`) :
+**Si vous préférez exclure** (décommenter dans `.gitignore`) :
 1. Les utilisateurs devront télécharger le SDK depuis https://open.ys7.com/
 2. Extraire dans `windows/third_party/ezviz_sdk/`
 3. Voir `windows/README.md` pour les instructions
