@@ -100,6 +100,20 @@ flutter build macos
 
 ## 🐛 Dépannage
 
+### Erreur : Unable to find module dependency: 'Flutter'
+
+**Solution** : Les fichiers Swift utilisent maintenant `import FlutterMacOS` au lieu de `import Flutter`.
+
+Si vous avez encore l'erreur :
+```bash
+cd macos
+pod deintegrate
+pod install
+cd ..
+flutter clean
+flutter pub get
+```
+
 ### Erreur : Framework non trouvé
 - Vérifier que le framework est dans `macos/Frameworks/`
 - Vérifier la configuration dans `podspec`
@@ -111,4 +125,6 @@ flutter build macos
 ### Erreur de compilation Swift
 - Vérifier que Swift 5.0+ est utilisé
 - Vérifier les imports conditionnels
+
+Voir `macos/TROUBLESHOOTING.md` pour plus de détails.
 

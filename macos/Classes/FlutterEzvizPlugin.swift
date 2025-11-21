@@ -10,7 +10,7 @@
 //  3. Use alternative video players
 //
 
-import Flutter
+import FlutterMacOS
 import AppKit
 
 // TODO: Import EZVIZ SDK via FFI or alternative method

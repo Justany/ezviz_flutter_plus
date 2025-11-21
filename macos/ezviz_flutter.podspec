@@ -19,8 +19,14 @@ This implementation may use FFI to wrap the iOS SDK or fallback to REST APIs.
   s.dependency 'FlutterMacOS'
   s.platform = :osx, '10.14'
 
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
+  s.pod_target_xcconfig = { 
+    'DEFINES_MODULE' => 'YES',
+    'EXCLUDED_ARCHS[sdk=macosx*]' => 'i386'
+  }
   s.swift_version = '5.0'
+  
+  # Ensure FlutterMacOS framework is available
+  s.frameworks = 'AppKit', 'Foundation'
 
   # TODO: If using iOS SDK via FFI, uncomment and configure:
   # s.vendored_frameworks = [

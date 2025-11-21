@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Flutter
+import FlutterMacOS
 import AppKit
 
 public class EzvizView: NSObject, FlutterPlatformView {

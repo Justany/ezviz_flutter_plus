@@ -8,7 +8,7 @@
 //
 
 import Foundation
-import Flutter
+import FlutterMacOS
 
 // TODO: If using iOS SDK via FFI, import the framework
 // #if canImport(EZOpenSDKFramework)

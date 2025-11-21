@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Flutter
+import FlutterMacOS
 import AppKit
 
 @objc
