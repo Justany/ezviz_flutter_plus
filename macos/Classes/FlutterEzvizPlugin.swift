@@ -50,11 +50,13 @@ public class SwiftFlutterEzvizPlugin: NSObject, FlutterPlugin, FlutterStreamHand
 
         registrar.addMethodCallDelegate(instance, channel: methodChannel)
         
-        // Register platform view factory for video player
-        registrar.register(
-            EzvizViewFactory(messenger: registrar.messenger()),
-            withId: EzvizPlayerChannelMethods.methodChannelName
-        )
+        // Note: Platform View registration is commented out as FlutterMacOS
+        // Platform Views support may be limited. The Dart code uses a Container placeholder.
+        // When FlutterMacOS fully supports Platform Views, uncomment the following:
+        // registrar.register(
+        //     EzvizViewFactory(messenger: registrar.messenger()),
+        //     withId: EzvizPlayerChannelMethods.methodChannelName
+        // )
     }
 
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {

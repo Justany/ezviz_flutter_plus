@@ -7,9 +7,7 @@
 
 import Foundation
 
-func ezvizLog(msg: String) {
-    print("EZviz Log (macOS): \(msg)")
-}
+// Note: ezvizLog is defined in FlutterEzvizPlugin.swift to avoid duplication
 
 // Date formatting utilities
 func dateToStr(_ date: Date) -> String {

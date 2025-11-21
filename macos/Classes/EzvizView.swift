@@ -4,14 +4,17 @@
 //
 //  Platform view for EZVIZ video player on macOS
 //  Note: This will need to use FFI wrapper or alternative video player
+//  Note: FlutterMacOS Platform Views support may be limited
+//  Currently, macOS uses a Container placeholder in Dart code
 //
 
 import Foundation
 import FlutterMacOS
 import AppKit
 
-public class EzvizView: NSObject, FlutterPlatformView {
-    private var view: NSView
+// Placeholder view for future Platform View support on macOS
+public class EzvizView: NSObject {
+    private var nativeView: NSView
     private var messenger: FlutterBinaryMessenger
     private var viewId: Int64
     private var methodChannel: FlutterMethodChannel?
@@ -22,13 +25,15 @@ public class EzvizView: NSObject, FlutterPlatformView {
         
         // Create a placeholder view for now
         // TODO: Replace with actual video player view using FFI wrapper or alternative player
-        self.view = NSView(frame: frame)
-        self.view.wantsLayer = true
-        self.view.layer?.backgroundColor = NSColor.black.cgColor
+        // Note: This view is not currently used as FlutterMacOS Platform Views are not fully supported
+        self.nativeView = NSView(frame: frame)
+        self.nativeView.wantsLayer = true
+        self.nativeView.layer?.backgroundColor = NSColor.black.cgColor
         
         super.init()
         
         // Setup method channel for player control
+        // This channel can still be used for method calls even without Platform View
         self.methodChannel = FlutterMethodChannel(
             name: "\(EzvizPlayerChannelMethods.methodChannelName)_\(viewId)",
             binaryMessenger: messenger
@@ -37,10 +42,6 @@ public class EzvizView: NSObject, FlutterPlatformView {
         methodChannel?.setMethodCallHandler { [weak self] (call: FlutterMethodCall, result: @escaping FlutterResult) in
             self?.handleMethodCall(call, result: result)
         }
-    }
-    
-    public func view() -> NSView {
-        return self.view
     }
     
     private func handleMethodCall(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
